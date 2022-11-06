@@ -1,0 +1,40 @@
+@import './index.scss';
+
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+
+// section {
+//     padding: 5em 2em;
+// }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  outline: 3px solid $clr-primary;
+  outline-offset: 3px;
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: $fs-h1;
+}
+h2 {
+  font-size: $fs-h2;
+}
+h3 {
+  font-size: $fs-h3;
+}

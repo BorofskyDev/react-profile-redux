@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yeseva+One&display=swap');
+
+$clr-primary: #555de6;
+$clr-secondary: #d97c50;
+$clr-accent: #50add9;
+
+$clr-light: #d5d6e6;
+$clr-dark: #16183a;
+
+$ff-body: 'Josefin Sans', sans-serif;
+$ff-heading: 'Yeseva One', cursive;
+
+$fs-h1: 3rem;
+$fs-h2: 2.25rem;
+$fs-h3: 1.25rem;
+$fs-body: 1rem;
+
+@media (min-width: 35em) {
+  $fs-h1: 3.5rem;
+}
+
+@media (min-width: 55em) {
+  $fs-h1: 4.5rem;
+  $fs-h2: 3.75rem;
+  $fs-h3: 1.5rem;
+  $fs-body: 1.125rem;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: $clr-dark;
+  color: $clr-light;
+  margin: 0;
+  font-family: $ff-body;
+  font-size: $fs-body;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ------------------- */
+/* Accessebility       */
+/* ------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: $clr-light;
+  color: $clr-dark;
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-200%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
